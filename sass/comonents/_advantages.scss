@@ -3,14 +3,14 @@
   padding-bottom: 94px;
 }
 
-.advantages__ul {
+.advantages__list {
   display: flex;
 }
 
-.advantages__li {
+.advantages__item {
   width: 270px;
 }
-.advantages__li + .advantages__li {
+.advantages__item + .advantages__item {
   margin-left: 30px;
 }
 

@@ -29,7 +29,7 @@
   color: var(--them-color);
 }
 
-.contacts__li + .contacts__li {
+.contacts__item + .contacts__item {
   margin-top: 9px;
 }
 
@@ -64,11 +64,11 @@
   color: var(--text-secondary);
 }
 
-.social__ul {
+.social__list {
   display: flex;
 }
 
-.social__li {
+.social__item {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -76,11 +76,11 @@
   margin-top: 20px;
 }
 
-.social__li + .social__li {
+.social__item + .social__item {
   margin-left: 10px;
 }
 
-.social__a {
+.social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,8 +92,8 @@
   transition: hover, focus, 250ms var(--time-cubic);
 }
 
-.social__a:hover,
-.social__a:focus {
+.social__link:hover,
+.social__link:focus {
   background-color: var(--them-color);
 }
 
