@@ -115,8 +115,7 @@ address {
   transition: hover, focus, 250ms var(--time-cubic);
 }
 
-.header__link:hover,
-.header__link:focus {
+.header__link:hover, .header__link:focus {
   color: var(--them-color);
 }
 
@@ -154,17 +153,11 @@ address {
 
 .header__tel-mail {
   margin-right: 10px;
-}
-
-.header__mail svg,
-.header__tel svg {
   fill: var(--text-secondary-lighter);
 }
 
-.header__contacts-link:hover,
-.header__contacts-link:focus {
-  color: var(--them-color);
-  fill: var(--them-color);
+.header__tel {
+  fill: var(--text-secondary-lighter);
 }
 
 .header__contacts-link {
@@ -186,6 +179,15 @@ address {
   -webkit-transition: hover, focus, 250ms var(--time-cubic);
   -o-transition: hover, focus, 250ms var(--time-cubic);
   transition: hover, focus, 250ms var(--time-cubic);
+}
+
+.header__contacts-link:hover, .header__contacts-link:focus {
+  color: var(--them-color);
+}
+
+.header__contacts-link:hover svg,
+.header__contacts-link:focus svg {
+  fill: var(--them-color);
 }
 
 .hero {
@@ -262,6 +264,54 @@ address {
   transition: opacity, transform, 250ms var(--time-cubic);
   transition: opacity, transform, 250ms var(--time-cubic), -webkit-transform;
   z-index: 1;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop .cloused {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: var(--text-secondary);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 250ms var(--time-cubic);
+  transition: -webkit-transform 250ms var(--time-cubic);
+  -o-transition: transform 250ms var(--time-cubic);
+  transition: transform 250ms var(--time-cubic);
+  transition: transform 250ms var(--time-cubic), -webkit-transform 250ms var(--time-cubic);
+}
+
+.backdrop .cloused svg {
+  color: #000000;
+}
+
+.backdrop .cloused:hover svg {
+  fill: var(--them-color);
 }
 
 .modal {
@@ -356,15 +406,14 @@ address {
   transition: fill 250ms var(--time-cubic);
 }
 
-.hero-input:focus,
-.textarea:focus {
-  border-color: var(--them-color);
-}
-
 .hero-input {
   -webkit-transition: border 250ms var(--time-cubic);
   -o-transition: border 250ms var(--time-cubic);
   transition: border 250ms var(--time-cubic);
+}
+
+.hero-input:focus {
+  border-color: var(--them-color);
 }
 
 .hero-input:focus + svg {
@@ -440,6 +489,10 @@ address {
   margin-top: 4px;
 }
 
+.textarea:focus {
+  border-color: var(--them-color);
+}
+
 .textarea::-webkit-input-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
@@ -489,54 +542,6 @@ address {
   -webkit-transform: translate(-50%, -50%) scale(1.1);
       -ms-transform: translate(-50%, -50%) scale(1.1);
           transform: translate(-50%, -50%) scale(1.1);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.cloused svg {
-  color: #000000;
-}
-
-.cloused:hover svg {
-  fill: var(--them-color);
-}
-
-.cloused {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: var(--text-secondary);
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 250ms var(--time-cubic);
-  transition: -webkit-transform 250ms var(--time-cubic);
-  -o-transition: transform 250ms var(--time-cubic);
-  transition: transform 250ms var(--time-cubic);
-  transition: transform 250ms var(--time-cubic), -webkit-transform 250ms var(--time-cubic);
 }
 
 .advantages {
@@ -748,6 +753,12 @@ address {
   transition: hover, focus, 250ms var(--time-cubic);
 }
 
+.team__social-item:hover {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: var(--them-color);
+}
+
 .team__social-item + .team__social-item {
   margin-left: 10px;
 }
@@ -775,17 +786,11 @@ address {
   fill: var(--social-link-color);
 }
 
-.team__social-item:hover {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  background-color: var(--them-color);
-}
-
 .team__social-link:hover {
   fill: var(--text-secondary);
 }
 
-.team__social-link:focus {
+.team__social-link:hover:focus {
   fill: var(--text-secondary);
   background-color: var(--them-color);
 }
@@ -847,8 +852,7 @@ address {
   fill: var(--social-link-color);
 }
 
-.customers__link:hover,
-.customers__link:focus {
+.customers__link:hover, .customers__link:focus {
   fill: var(--them-color);
   border-color: var(--them-color);
 }
@@ -890,16 +894,15 @@ address {
   transition: hover, focus, 250ms var(--time-cubic);
 }
 
-.filling__list + .filling__list {
-  margin-left: 8px;
-}
-
-.filling__button:hover,
-.filling__button:focus {
+.filling__button:hover, .filling__button:focus {
   color: #ffffff;
   background-color: var(--them-color);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filling__list + .filling__list {
+  margin-left: 8px;
 }
 
 .card {
@@ -922,7 +925,7 @@ address {
   margin-right: 0;
 }
 
-.card__list .card__link:hover {
+.card__link:hover {
   display: block;
   -webkit-border-radius: 4px;
           border-radius: 4px;
@@ -933,6 +936,30 @@ address {
 .card__product {
   position: relative;
   overflow: hidden;
+}
+
+.card__product::before {
+  display: inline-block;
+  content: "Технокряк это современная площадка распространения коронавируса Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 250ms var(--time-cubic);
+  transition: -webkit-transform 250ms var(--time-cubic);
+  -o-transition: transform 250ms var(--time-cubic);
+  transition: transform 250ms var(--time-cubic);
+  transition: transform 250ms var(--time-cubic), -webkit-transform 250ms var(--time-cubic);
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--text-secondary);
 }
 
 .card__img {
@@ -969,30 +996,6 @@ address {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
-}
-
-.card__product::before {
-  display: inline-block;
-  content: "Технокряк это современная площадка распространения коронавируса Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 63px 24px;
-  background-color: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-transition: -webkit-transform 250ms var(--time-cubic);
-  transition: -webkit-transform 250ms var(--time-cubic);
-  -o-transition: transform 250ms var(--time-cubic);
-  transition: transform 250ms var(--time-cubic);
-  transition: transform 250ms var(--time-cubic), -webkit-transform 250ms var(--time-cubic);
-  font-size: 18px;
-  line-height: 1.55;
-  letter-spacing: 0.03em;
-  color: var(--text-secondary);
 }
 
 .footer {
@@ -1104,8 +1107,7 @@ address {
   transition: hover, focus, 250ms var(--time-cubic);
 }
 
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   background-color: var(--them-color);
 }
 
@@ -1166,6 +1168,10 @@ address {
   transition: focus, 250ms var(--time-cubic);
 }
 
+.subscription__mail:focus {
+  border-color: var(--them-color);
+}
+
 .subscription__bottom {
   margin-left: 12px;
   display: -webkit-box;
@@ -1207,9 +1213,5 @@ address {
   letter-spacing: 0.06em;
   color: var(--text-secondary);
   margin-right: 10px;
-}
-
-.subscription__mail:focus {
-  border-color: var(--them-color);
 }
 /*# sourceMappingURL=main.css.map */

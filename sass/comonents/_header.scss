@@ -29,10 +29,9 @@
 
 .header__list {
   position: relative;
-}
-
-.header__list:not(:last-child) {
-  margin-right: 50px;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .header__link {
@@ -48,26 +47,24 @@
   letter-spacing: 0.02em;
 
   transition: hover, focus, 250ms var(--time-cubic);
-}
-
-.header__link:hover,
-.header__link:focus {
-  color: var(--them-color);
+  &:hover,
+  &:focus {
+    color: var(--them-color);
+  }
 }
 
 .active-page {
   color: var(--them-color);
-}
-
-.active-page::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  background-color: var(--them-color);
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: var(--them-color);
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+  }
 }
 
 .header__contacts {
@@ -82,17 +79,11 @@
 
 .header__tel-mail {
   margin-right: 10px;
-}
-
-.header__mail svg,
-.header__tel svg {
   fill: var(--text-secondary-lighter);
 }
 
-.header__contacts-link:hover,
-.header__contacts-link:focus {
-  color: var(--them-color);
-  fill: var(--them-color);
+.header__tel {
+  fill: var(--text-secondary-lighter);
 }
 
 .header__contacts-link {
@@ -110,4 +101,12 @@
   letter-spacing: 0.02em;
 
   transition: hover, focus, 250ms var(--time-cubic);
+  &:hover,
+  &:focus {
+    color: var(--them-color);
+  }
+  &:hover svg,
+  &:focus svg {
+    fill: var(--them-color);
+  }
 }

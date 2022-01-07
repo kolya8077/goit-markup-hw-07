@@ -66,6 +66,10 @@
   border-radius: 50%;
 
   transition: hover, focus, 250ms var(--time-cubic);
+  &:hover {
+    border-radius: 50%;
+    background-color: var(--them-color);
+  }
 }
 
 .team__social-item + .team__social-item {
@@ -83,17 +87,11 @@
   transition: hover, focus, 250ms var(--time-cubic);
 
   fill: var(--social-link-color);
-}
-
-.team__social-item:hover {
-  border-radius: 50%;
-  background-color: var(--them-color);
-}
-
-.team__social-link:hover {
-  fill: var(--text-secondary);
-}
-.team__social-link:focus {
-  fill: var(--text-secondary);
-  background-color: var(--them-color);
+  &:hover {
+    fill: var(--text-secondary);
+    &:focus {
+      fill: var(--text-secondary);
+      background-color: var(--them-color);
+    }
+  }
 }

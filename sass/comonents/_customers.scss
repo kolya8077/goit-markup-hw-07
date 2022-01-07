@@ -38,10 +38,9 @@
   transition: hover, focus, 250ms var(--time-cubic);
 
   fill: var(--social-link-color);
-}
-
-.customers__link:hover,
-.customers__link:focus {
-  fill: var(--them-color);
-  border-color: var(--them-color);
+  &:hover,
+  &:focus {
+    fill: var(--them-color);
+    border-color: var(--them-color);
+  }
 }

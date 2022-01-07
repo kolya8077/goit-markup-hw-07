@@ -90,11 +90,10 @@
   height: 44px;
   border-radius: 50%;
   transition: hover, focus, 250ms var(--time-cubic);
-}
-
-.social__link:hover,
-.social__link:focus {
-  background-color: var(--them-color);
+  &:hover,
+  &:focus {
+    background-color: var(--them-color);
+  }
 }
 
 .subscription {
@@ -136,6 +135,9 @@
   outline: none;
   color: #ffffff;
   transition: focus, 250ms var(--time-cubic);
+  &:focus {
+    border-color: var(--them-color);
+  }
 }
 
 .subscription__bottom {
@@ -167,8 +169,4 @@
   color: var(--text-secondary);
 
   margin-right: 10px;
-}
-
-.subscription__mail:focus {
-  border-color: var(--them-color);
 }
